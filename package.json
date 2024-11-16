@@ -1,22 +1,45 @@
 {
-  "name": "sofia-goma-boilerplate-nestjs",
-  "version": "0.0.1",
-  "description": "The Sofia Goma Backend Boilerplate with NestJS",
-  "author": "Sofia Goma",
-  "license": "ISC",
-  "main": "main.ts",
-  "scripts": {
-    "build": "nest build",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "dependencies": {
-    "@nestjs/common": "^10.4.7",
-    "@nestjs/core": "^10.4.7",
-    "@nestjs/platform-express": "^10.4.7",
-    "rxjs": "^7.8.1"
-  }
+    "name": "sofia-goma-boilerplate-nestjs",
+    "version": "0.0.1",
+    "description": "The Sofia Goma Backend Boilerplate with NestJS",
+    "author": "Sofia Goma",
+    "license": "ISC",
+    "main": "main.ts",
+    "scripts": {
+        "build": "nest build",
+        "start": "nest start",
+        "start:dev": "nest start --watch",
+        "start:debug": "nest start --debug --watch",
+        "start:prod": "node dist/main",
+        "prepare": "husky install",
+        "format": "prettier src/**/*.{ts,tsx} --write",
+        "check-format": "prettier --check .",
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "check-lint": "eslint . --ext ts --ext tsx --ext js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "@nestjs/common": "^10.4.7",
+        "@nestjs/core": "^10.4.7",
+        "@nestjs/platform-express": "^10.4.7",
+        "rxjs": "^7.8.1"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@typescript-eslint/eslint-plugin": "^8.14.0",
+        "@typescript-eslint/parser": "^8.14.0",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.31.0",
+        "eslint-plugin-jsdoc": "^50.5.0",
+        "eslint-plugin-prettier": "^5.2.1",
+        "globals": "^15.12.0",
+        "husky": "^9.1.6",
+        "lint-staged": "^15.2.10",
+        "prettier": "^3.3.3",
+        "typescript-eslint": "^8.14.0"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
 }
