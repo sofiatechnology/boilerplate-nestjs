@@ -1,3 +1,3 @@
-# sofia-goma-boilerplate-nestjs
+# boilerplate-nestjs
 
-Sofia Goma Backend Boilerplate with NestJS
+SOFIA Tech. Backend boilerplate with NestJS
